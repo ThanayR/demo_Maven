@@ -2,39 +2,36 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-06-24T12:00:17 IST" name="Default suite" finished-at="2021-06-24T12:00:56 IST" duration-ms="38132">
+  <suite started-at="2021-06-27T19:09:50 IST" name="Default suite" finished-at="2021-06-27T19:10:36 IST" duration-ms="46049">
     <groups>
     </groups>
-    <test started-at="2021-06-24T12:00:17 IST" name="Default test" finished-at="2021-06-24T12:00:56 IST" duration-ms="38132">
+    <test started-at="2021-06-27T19:09:50 IST" name="Default test" finished-at="2021-06-27T19:10:36 IST" duration-ms="46049">
       <class name="demo_alert">
-        <test-method is-config="true" signature="setup()[pri:0, instance:demo_alert@22a637e7]" started-at="2021-06-24T12:00:17 IST" name="setup" finished-at="2021-06-24T12:00:21 IST" duration-ms="3327" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:demo_alert@1d119efb]" started-at="2021-06-27T19:09:50 IST" name="setup" finished-at="2021-06-27T19:09:53 IST" duration-ms="3174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test_alert()[pri:0, instance:demo_alert@22a637e7]" started-at="2021-06-24T12:00:21 IST" name="test_alert" finished-at="2021-06-24T12:00:55 IST" duration-ms="34734" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="test_alert()[pri:0, instance:demo_alert@1d119efb]" started-at="2021-06-27T19:09:53 IST" name="test_alert" finished-at="2021-06-27T19:10:36 IST" duration-ms="42774" status="FAIL">
+          <exception class="org.openqa.selenium.NoAlertPresentException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//li[contains(@class,'menu_l1')]//a[@title='Coronavirus'][normalize-space()='Coronavirus123']"}
+              <![CDATA[no such alert
   (Session info: chrome=91.0.4472.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'RAVI-PC', ip: '192.168.29.97', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Ravi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55981}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 512e3bbff6f1aac6eef7265fc50983d7
-*** Element info: {Using=xpath, value=//li[contains(@class,'menu_l1')]//a[@title='Coronavirus'][normalize-space()='Coronavirus123']}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Ravi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52979}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73d587f875ab5b7d9e6eca86ec22bcfb]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li[contains(@class,'menu_l1')]//a[@title='Coronavirus'][normalize-space()='Coronavirus123']"}
+              <![CDATA[org.openqa.selenium.NoAlertPresentException: no such alert
   (Session info: chrome=91.0.4472.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'RAVI-PC', ip: '192.168.29.97', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Ravi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55981}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 512e3bbff6f1aac6eef7265fc50983d7
-*** Element info: {Using=xpath, value=//li[contains(@class,'menu_l1')]//a[@title='Coronavirus'][normalize-space()='Coronavirus123']}
-at jdk.internal.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\Ravi\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52979}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73d587f875ab5b7d9e6eca86ec22bcfb
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
@@ -44,11 +41,9 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at demo_alert.test_alert(demo_alert.java:45)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
+at demo_alert.test_alert(demo_alert.java:41)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -79,11 +74,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_alert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo_alert@22a637e7]" started-at="2021-06-24T12:00:55 IST" name="tearDown" finished-at="2021-06-24T12:00:55 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo_alert@1d119efb]" started-at="2021-06-27T19:10:36 IST" name="tearDown" finished-at="2021-06-27T19:10:36 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
