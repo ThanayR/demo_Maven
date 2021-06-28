@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -49,6 +50,7 @@ public class Library {
 		String url = readConfigFile("url");
 		// if response code = 200
 		driver.get(url);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// else throw new exception
 	}
 	
