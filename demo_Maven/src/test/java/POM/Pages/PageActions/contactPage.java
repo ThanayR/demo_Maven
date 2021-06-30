@@ -1,4 +1,4 @@
-package POM.Pages;
+package POM.Pages.PageActions;
 
 import org.openqa.selenium.WebDriver;
 

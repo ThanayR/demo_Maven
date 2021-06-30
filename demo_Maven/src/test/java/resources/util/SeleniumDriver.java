@@ -6,8 +6,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.fluent.Request;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,11 +18,36 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Library {
-	public static WebDriver driver;
+public class SeleniumDriver {
+	private static WebDriver driver;
+	private static SeleniumDriver seleniumDriver;
+	private static WebDriverWait wait;
 	
-	public static WebDriver openBrowser() throws IOException {
+	private SeleniumDriver() throws IOException {
+		openBrowser();
+		wait = new WebDriverWait(driver, Integer.parseInt(readConfigFile("timeout")));
+	}
+	
+	public static WebDriver getDriver() {
+		return driver;
+	}
+	
+	public static void setUpDriver() throws IOException {
+		if (seleniumDriver == null)
+			seleniumDriver = new SeleniumDriver();
+	}
+	
+	public void tearDown() {
+		if (driver!=null) {
+			driver.quit();
+			driver = null;
+			seleniumDriver = null;
+		}
+	}	
+	
+	private static WebDriver openBrowser() throws IOException {
 		String browserName = readConfigFile("browser");
 		
 		if (browserName.equalsIgnoreCase("chrome")) {
@@ -48,9 +76,13 @@ public class Library {
 	
 	public static void navigateURL() throws IOException {
 		String url = readConfigFile("url");
-		// if response code = 200
-		driver.get(url);
-		// else throw new exception
+		if (getResponseCode()==200 ) {
+			driver.get(url);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		}else {
+			System.out.println("Invalid URL");
+			System.exit(0);
+			}
 	}
 	
 	public static boolean isElementPresent( String xPathExpr) {
@@ -88,13 +120,7 @@ public class Library {
 		return windowID;
 	}
 	
-	public static String strEncrypt(String str) {
-		byte[] encrypt = Base64.encodeBase64(str.getBytes());
-		return new String(encrypt);
-	}
-	
-	public static String strDecrypt(String str) {
-		byte[] decrypt = Base64.decodeBase64(str);
-		return new String(decrypt);
+	public static int getResponseCode() throws ClientProtocolException, IOException {
+		return Request.Get(readConfigFile("url")).execute().returnResponse().getStatusLine().getStatusCode();
 	}
 }

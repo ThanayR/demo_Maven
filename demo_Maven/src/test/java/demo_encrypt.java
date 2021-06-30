@@ -1,5 +1,3 @@
-import org.apache.commons.codec.binary.Base64;
-
 import resources.util.Library;
 
 public class demo_encrypt extends Library {

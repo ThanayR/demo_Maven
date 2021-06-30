@@ -2,7 +2,6 @@ import java.io.IOException;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import resources.util.Library;
 
@@ -17,7 +16,7 @@ public class iFrame_Test extends Library {
 		//driver.quit();
 	}
 	
-	@Test
+	//@Test
 	public void test_iFrame() throws IOException {
 		navigateURL();
 		
